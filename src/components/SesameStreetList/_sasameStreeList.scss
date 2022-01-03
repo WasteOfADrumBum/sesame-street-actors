@@ -1,0 +1,193 @@
+.sesameStreetList {
+    .sesameStreetFilter {
+        margin: 0 auto;
+
+        img {
+            object-fit: cover;
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .cookieMonster,
+        .elmo {
+            // rows/col
+            grid-template: max-content / max-content max-content;
+
+            .cookieMonsterImg,
+            .elmoImg {
+                align-self: end;
+            }
+
+            blockquote {
+                align-self: start;
+            }
+
+            .selectListOption {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        .cookieMonster {
+            .speechBubble {
+                padding: 15px 15px;
+                margin-bottom: 6em;
+                border: 10px solid #0F98DC;
+
+                /* creates larger curve */
+                &:before {
+                    bottom: -40px;
+                    right: 60px;
+                    width: 50px;
+                    height: 30px;
+                    border-color: #0F98DC;
+                    border-bottom-left-radius: 80px 50px;
+                    border-width: 0 0 10px 10px;
+                }
+
+                /* creates smaller curve */
+                &:after {
+                    bottom: -40px;
+                    right: 56px;
+                    width: 20px;
+                    height: 30px;
+                    border-color: #0F98DC;
+                    border-bottom-left-radius: 40px 50px;
+                    border-width: 0 0 10px 10px;
+                }
+            }
+
+            /* creates a small circle to produce a rounded point where the two curves meet */
+            .speechBubble> :first-child:before {
+                bottom: -40px;
+                right: 53px;
+                width: 10px;
+                height: 10px;
+                background: #0F98DC;
+            }
+
+            /* creates a white rectangle to cover part of the oval border*/
+            .speechBubble> :first-child:after {
+                bottom: -10px;
+                right: 76px;
+                width: 25px;
+                height: 15px;
+            }
+        }
+
+        .elmo {
+            .speechBubble {
+                padding: 15px 15px;
+                margin-bottom: 6em;
+                border: 10px solid #ec0a0a;
+
+                /* creates larger curve */
+                &:before {
+                    bottom: -40px;
+                    left: 60px;
+                    width: 50px;
+                    height: 30px;
+                    border-color: #ec0a0a;
+                    border-bottom-right-radius: 80px 50px;
+                    border-width: 0 10px 10px 0;
+                }
+
+                /* creates smaller curve */
+                &:after {
+                    bottom: -40px;
+                    left: 56px;
+                    width: 20px;
+                    height: 30px;
+                    border-color: #ec0a0a;
+                    border-bottom-right-radius: 40px 50px;
+                    border-width: 0 10px 10px 0;
+                }
+            }
+
+            /* creates a small circle to produce a rounded point where the two curves meet */
+            .speechBubble> :first-child:before {
+                bottom: -40px;
+                left: 53px;
+                width: 10px;
+                height: 10px;
+                background: #ec0a0a;
+            }
+
+            /* creates a white rectangle to cover part of the oval border*/
+            .speechBubble> :first-child:after {
+                bottom: -10px;
+                left: 76px;
+                width: 25px;
+                height: 15px;
+            }
+        }
+
+        .speechBubble {
+            position: relative;
+            text-align: center;
+            color: #333;
+            background: #fff;
+            border-radius: 20px;
+
+            /* creates larger curve */
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 10;
+                border-style: solid;
+                background: transparent;
+                display: block;
+            }
+
+            /* creates smaller curve */
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 10;
+                border-style: solid;
+                background: transparent;
+                display: block;
+            }
+        }
+
+        /* creates a small circle to produce a rounded point where the two curves meet */
+        .speechBubble> :first-child:before {
+            content: "";
+            position: absolute;
+            border-radius: 10px;
+        }
+
+        /* creates a white rectangle to cover part of the oval border*/
+        .speechBubble> :first-child:after {
+            content: "";
+            position: absolute;
+            background: #fff;
+        }
+
+    }
+
+    .sesameStreetCards {
+        .actor {
+            width: 18rem;
+            height: 18rem;
+
+            .image {
+                img {
+                    object-fit: cover;
+                    width: 18rem;
+                    height: 18rem;
+                }
+            }
+
+            .name {
+                width: 16rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+
+            .episode {
+                top: 20%;
+                left: 83%
+            }
+        }
+    }
+}

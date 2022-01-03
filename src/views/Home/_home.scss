@@ -1,0 +1,22 @@
+.home {
+    .bestlifeLink {
+        a {
+            text-decoration: none;
+            color: red
+        }
+    }
+
+    .fontFaceSesameStreet {
+        font-size: 8vw;
+        background-image: linear-gradient(to left, violet, indigo, green, blue, goldenrod, orange, red, maroon);
+        background-clip: text;
+        color: transparent;
+    }
+
+    hr {
+        position: absolute;
+        left: 0px;
+        width: 100vw;
+        height: 10px;
+    }
+}
